@@ -1,0 +1,35 @@
+POLICY DOCUMENT: STANDARD AUTO INSURANCE
+Policy Type: Auto
+Applies to: POL1001, POL1004
+
+1. COVERAGE SUMMARY
+This policy provides coverage for accidental damage, collision, theft, and third-party
+liability arising from the use of the insured vehicle. Coverage limit and deductible
+are specified individually on each policyholder's schedule.
+
+2. WHAT IS COVERED
+- Collision damage: repair costs resulting from a collision with another vehicle or object.
+- Theft: total loss or partial loss due to theft of the insured vehicle or its parts.
+- Fire and natural calamity: damage caused by fire, flood, storm, or earthquake.
+- Third-party liability: bodily injury or property damage caused to a third party.
+
+3. WHAT IS NOT COVERED (EXCLUSIONS)
+- Claims filed within the first 7 days of policy issuance for theft are subject to
+  additional verification and may be denied if sufficient documentation is not provided,
+  as this window is associated with higher fraud risk.
+- Damage caused while driving under the influence of alcohol or drugs.
+- Damage caused by using the vehicle for commercial purposes unless a commercial
+  rider is separately purchased.
+- Wear and tear, mechanical breakdown, or manufacturing defects.
+- Consequential or indirect losses (e.g., loss of income due to vehicle unavailability).
+- Any claim submitted after the policy end date or during a lapsed/expired period.
+
+4. CLAIM SETTLEMENT
+Approved claims are settled up to the coverage limit stated on the policyholder's
+schedule, minus the applicable deductible. Claims exceeding the coverage limit will
+be settled only up to that limit; the policyholder is responsible for any excess.
+
+5. FRAUD AND MISREPRESENTATION
+Any claim found to involve misrepresentation of facts, inflated claim amounts, or
+incidents inconsistent with the policy's coverage terms may be denied and referred
+for further investigation.
