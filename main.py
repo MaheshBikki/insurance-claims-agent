@@ -12,11 +12,11 @@ app = FastAPI(title="Insurance Claims Agent - Milestone 1")
 
 # Bedrock client. On EC2 this automatically uses the instance's IAM role -
 # no access keys needed or stored anywhere, which is the secure pattern.
-AWS_REGION = os.environ.get("AWS_REGION", "us-east-1")
+AWS_REGION = os.environ.get("AWS_REGION", "ap-south-1")
 bedrock = boto3.client("bedrock-runtime", region_name=AWS_REGION)
 
 # Swap this if you request access to a different Bedrock model.
-MODEL_ID = os.environ.get("BEDROCK_MODEL_ID", "anthropic.claude-3-5-sonnet-20241022-v2:0")
+MODEL_ID = os.environ.get("BEDROCK_MODEL_ID", "global.anthropic.claude-sonnet-5")
 
 
 class AskRequest(BaseModel):
