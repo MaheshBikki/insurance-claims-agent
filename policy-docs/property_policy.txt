@@ -1,0 +1,35 @@
+POLICY DOCUMENT: STANDARD PROPERTY INSURANCE
+Policy Type: Property
+Applies to: POL1003
+
+1. COVERAGE SUMMARY
+This policy provides coverage for physical damage to the insured property caused by
+fire, natural calamity, theft, or other insured perils, up to the coverage limit
+stated on the policyholder's schedule.
+
+2. WHAT IS COVERED
+- Fire damage: destruction or damage to the structure and contents caused by fire.
+- Natural calamities: damage caused by flood, storm, cyclone, or earthquake.
+- Burglary and theft: loss of contents due to forced entry.
+- Damage caused by falling trees, aircraft, or vehicles.
+
+3. WHAT IS NOT COVERED (EXCLUSIONS)
+- Any claim submitted after the policy end date. Coverage strictly ends on the
+  policy's stated end date; claims for incidents occurring after expiry, or claims
+  filed after expiry regardless of when the incident occurred, are not payable
+  under this policy.
+- Gradual damage such as dampness, rot, or pest infestation.
+- Damage arising from the policyholder's own negligence in maintaining the property
+  (e.g., failure to repair a known structural defect).
+- Loss of cash, jewelry, or valuables beyond the sub-limit specified on the schedule.
+- War, riot, or nuclear-related damage.
+
+4. CLAIM SETTLEMENT
+Approved claims are settled up to the coverage limit stated on the policyholder's
+schedule, minus the applicable deductible, based on the assessed repair or
+replacement cost of the damaged property.
+
+5. FRAUD AND MISREPRESENTATION
+Claims involving inflated damage estimates, staged incidents, or misrepresentation
+of the property's condition at the time of policy purchase may be denied and
+referred for further investigation.
