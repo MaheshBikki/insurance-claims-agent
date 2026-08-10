@@ -1,0 +1,38 @@
+POLICY DOCUMENT: STANDARD HEALTH INSURANCE
+Policy Type: Health
+Applies to: POL1002, POL1005
+
+1. COVERAGE SUMMARY
+This policy provides coverage for hospitalization, surgical procedures, and related
+medical treatment for the insured. Coverage limit and deductible are specified
+individually on each policyholder's schedule.
+
+2. WHAT IS COVERED
+- In-patient hospitalization expenses (room charges, doctor's fees, nursing charges).
+- Surgical procedures, including pre- and post-operative care within 15 days of the
+  procedure.
+- Diagnostic tests directly related to a covered hospitalization.
+- Ambulance charges up to a reasonable limit for emergency transport to a hospital.
+
+3. WHAT IS NOT COVERED (EXCLUSIONS)
+- Any pre-existing condition diagnosed before the policy start date, for the first
+  24 months of continuous coverage.
+- Routine health checkups, wellness visits, or preventive care not tied to an
+  active medical condition requiring hospitalization.
+- Cosmetic or elective procedures not medically necessary.
+- Treatment received outside a network hospital without prior authorization,
+  unless it is a genuine medical emergency.
+- Dental treatment and vision care, unless resulting directly from an accident
+  covered under this policy.
+- Any claim submitted after the policy end date or during a lapsed/expired period.
+
+4. CLAIM SETTLEMENT
+Approved claims are settled up to the coverage limit stated on the policyholder's
+schedule, minus the applicable deductible. For cashless treatment at a network
+hospital, the insurer settles directly with the hospital; for reimbursement claims,
+the policyholder is repaid after review of submitted medical bills and reports.
+
+5. FRAUD AND MISREPRESENTATION
+Claims involving inflated hospital bills, treatment inconsistent with the diagnosis,
+or misrepresentation of medical history at the time of policy purchase may be denied
+and referred for further investigation.
