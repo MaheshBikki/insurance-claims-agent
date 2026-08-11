@@ -13,9 +13,27 @@ testing this understands the RAG piece exists and why it's not live yet,
 rather than silently omitting it.
 """
 import streamlit as st
+import psycopg2
+import os
 
 from fraud_tool import check_claim_fraud_risk
 from settlement_tool import recommend_settlement
+
+
+def get_random_claim_id() -> str:
+    """Fetches one random claim_id from the database, so testers can explore
+    beyond the 3 curated examples across all 5,000 seeded claims."""
+    conn = psycopg2.connect(
+        host=os.environ["DB_HOST"], port=os.environ.get("DB_PORT", "5432"),
+        dbname=os.environ.get("DB_NAME", "claimsdb"), user=os.environ.get("DB_USER", "postgres"),
+        password=os.environ["DB_PASSWORD"],
+    )
+    cur = conn.cursor()
+    cur.execute("SELECT claim_id FROM claims ORDER BY RANDOM() LIMIT 1;")
+    row = cur.fetchone()
+    cur.close()
+    conn.close()
+    return row[0] if row else ""
 
 st.set_page_config(page_title="AI Claims Automation Agent", page_icon="🛡️", layout="centered")
 
@@ -36,7 +54,7 @@ with tab1:
         "Try one of these known example IDs, or enter your own:"
     )
 
-    example_cols = st.columns(3)
+    example_cols = st.columns(4)
     example_ids = {
         "CLM300116": "High risk (2 flags)",
         "CLM300186": "Medium risk (1 flag)",
@@ -45,9 +63,12 @@ with tab1:
     if "claim_id_field" not in st.session_state:
         st.session_state["claim_id_field"] = ""
 
-    for col, (cid, label) in zip(example_cols, example_ids.items()):
+    for col, (cid, label) in zip(example_cols[:3], example_ids.items()):
         if col.button(f"{cid}\n{label}"):
             st.session_state["claim_id_field"] = cid
+
+    if example_cols[3].button("🎲 Random Claim"):
+        st.session_state["claim_id_field"] = get_random_claim_id()
 
     st.text_input(
         "Claim ID", key="claim_id_field", placeholder="e.g. CLM300116"
