@@ -13,8 +13,13 @@ Fraud signals checked (mirrors what we validated by hand in psql):
    days of policy start - classic "early large claim" pattern.
 2. Claim's incident date falls after the policy's end date - claiming for an
    incident that happened (or was reported) after coverage lapsed.
-3. Policy status is computed LIVE from end_date, never trusted from a stored
-   column - this was a real bug we found and fixed during data validation.
+
+NOTE on a bug we found and fixed: an earlier version also flagged "policy is
+expired right now" on its own. That turned out to be wrong - it fired on 67%
+of all claims (3,333 of 5,000) simply because time had passed since the claim
+was filed, not because anything was actually suspicious. Policies naturally
+expire; that alone is not a fraud signal. Only claiming for an incident that
+happened AFTER the policy had already lapsed (flag #2 above) is meaningful.
 """
 import os
 from datetime import date
@@ -95,11 +100,8 @@ def check_claim_fraud_risk(claim_id: str) -> dict:
             f"({row['end_date']}) - policy had already lapsed."
         )
 
-    if policy_status_live == "expired" and row["incident_date"] <= row["end_date"]:
-        flags.append(
-            "Policy is now expired (though it was active when the incident occurred) - "
-            "confirm this claim was actually submitted before expiry, not filed late."
-        )
+    # Deliberately NOT flagging "policy is expired now" on its own - see module
+    # docstring. That check produced 67% false-positive flags in testing.
 
     if len(flags) >= 2:
         risk_level = "high"
@@ -122,8 +124,7 @@ def check_claim_fraud_risk(claim_id: str) -> dict:
 
 
 if __name__ == "__main__":
-    # Quick manual test against a few known claim IDs from our earlier query results.
-    test_ids = ["CLM300116", "CLM300186", "CLM300001", "CLM300002"]
+    test_ids = ["CLM300116", "CLM300186", "CLM300001", "CLM300002", "CLM300500"]
     for cid in test_ids:
         result = check_claim_fraud_risk(cid)
         print(f"\n{cid}:")
